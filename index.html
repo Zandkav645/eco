@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eco-Diaper - Inovasi Popok Bayi Biodegradable | SMK SMTI Pontianak</title>
+    <title>Eco-Diaper - Popok Bayi Biodegradable | SMK SMTI Pontianak</title>
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -21,8 +21,7 @@
                             700: '#15803d',
                             800: '#166534',
                             900: '#14532d',
-                            accent: '#d97706',
-                            accentLight: '#fef3c7'
+                            accent: '#d97706'
                         }
                     },
                     fontFamily: {
@@ -38,33 +37,28 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        .glass-card {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
         .hero-gradient {
             background: linear-gradient(135deg, #064e3b 0%, #047857 50%, #065f46 100%);
         }
         .gold-badge {
             background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
         }
-        .layer-box {
+        .layer-card {
             transition: all 0.3s ease;
         }
-        .layer-box:hover {
+        .layer-card:hover {
             transform: translateY(-4px);
         }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
 
-    <!-- NAVIGATION BAR -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-emerald-100 shadow-sm">
+    <!-- NAVIGASI (Fitur Klik Langsung Menuju Bagian) -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-emerald-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <div class="flex items-center gap-3">
+                <!-- Logo & Judul Singkat -->
+                <a href="#" class="flex items-center gap-3">
                     <div class="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center text-white shadow-lg shadow-brand-600/30">
                         <i data-lucide="leaf" class="w-6 h-6"></i>
                     </div>
@@ -72,16 +66,19 @@
                         <span class="font-bold text-xl text-brand-900 tracking-tight block">Eco-Diaper</span>
                         <span class="text-xs text-brand-600 font-medium">SMK SMTI Pontianak</span>
                     </div>
-                </div>
+                </a>
 
-                <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-600">
                     <a href="#masalah" class="hover:text-brand-600 transition-colors">Masalah</a>
-                    <a href="#solusi" class="hover:text-brand-600 transition-colors">Solusi & Inovasi</a>
-                    <a href="#spesifikasi" class="hover:text-brand-600 transition-colors">Hasil Uji SNI</a>
-                    <a href="#dampak" class="hover:text-brand-600 transition-colors">Dampak & SDGs</a>
-                    <a href="#tim" class="hover:text-brand-600 transition-colors">Tim Kami</a>
+                    <a href="#solusi" class="hover:text-brand-600 transition-colors">Solusi</a>
+                    <a href="#prosedur" class="hover:text-brand-600 transition-colors">Prosedur</a>
+                    <a href="#hasil-uji" class="hover:text-brand-600 transition-colors">Hasil Uji</a>
+                    <a href="#sdgs" class="hover:text-brand-600 transition-colors">SDGs</a>
+                    <a href="#tim" class="hover:text-brand-600 transition-colors">Tim Kerja</a>
                 </div>
 
+                <!-- Tombol Menu Mobile -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-slate-700 hover:text-brand-600 focus:outline-none p-2">
                         <i data-lucide="menu" class="w-6 h-6"></i>
@@ -90,53 +87,53 @@
             </div>
         </div>
 
+        <!-- Menu Mobile Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 space-y-3 shadow-lg">
             <a href="#masalah" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Masalah</a>
-            <a href="#solusi" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Solusi & Inovasi</a>
-            <a href="#spesifikasi" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Hasil Uji SNI</a>
-            <a href="#dampak" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Dampak & SDGs</a>
-            <a href="#tim" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Tim Kami</a>
+            <a href="#solusi" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Solusi</a>
+            <a href="#prosedur" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Prosedur Pembuatan</a>
+            <a href="#hasil-uji" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Hasil Uji SNI</a>
+            <a href="#sdgs" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Dampak SDGs</a>
+            <a href="#tim" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Tim Kerja</a>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section class="relative pt-32 pb-20 md:pt-40 md:pb-32 hero-gradient text-white overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <div class="absolute -right-20 -top-20 w-96 h-96 bg-emerald-400 rounded-full blur-3xl opacity-20 pointer-events-none"></div>
-        <div class="absolute -left-20 -bottom-20 w-96 h-96 bg-brand-300 rounded-full blur-3xl opacity-20 pointer-events-none"></div>
-
+    <!-- HEADER / HERO SECTION -->
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 hero-gradient text-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto space-y-6">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full gold-badge text-white text-xs sm:text-sm font-bold shadow-lg shadow-amber-900/20 uppercase tracking-wider">
+            <div class="text-center max-w-4xl mx-auto space-y-6">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full gold-badge text-white text-xs sm:text-sm font-bold shadow-lg uppercase tracking-wider">
                     <i data-lucide="award" class="w-4 h-4"></i>
-                    <span>AHM Best Student 2026 - SMK SMTI Pontianak</span>
+                    <span>Inovasi Ramah Lingkungan - SMK SMTI Pontianak</span>
                 </div>
 
-                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
                     Eco-Diaper
                 </h1>
                 
-                <p class="text-xl sm:text-2xl font-medium text-emerald-100 leading-relaxed">
-                    Inovasi Popok Bayi Biodegradable Berbasis Serat Batang Pisang dengan Penambahan Ekstrak Antimikroba Daun Sirih
+                <p class="text-lg sm:text-2xl font-medium text-emerald-100 leading-relaxed max-w-3xl mx-auto">
+                    Popok Bayi Biodegradable Berbasis Serat Batang Pisang dengan Penambahan Ekstrak Antimikroba Daun Sirih
                 </p>
 
-                <p class="text-base sm:text-lg text-emerald-200/90 max-w-2xl mx-auto">
-                    Solusi Ramah Lingkungan untuk Masa Depan Bumi dan Kesehatan Bayi
+                <p class="text-sm sm:text-base text-emerald-200/90 max-w-2xl mx-auto">
+                    Inovasi popok ramah lingkungan yang aman untuk kulit bayi, cepat terurai di tanah, dan bebas dari bahan kimia berbahaya.
                 </p>
 
-                <div class="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#masalah" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-brand-900 hover:bg-emerald-50 font-bold transition-all shadow-xl hover:shadow-2xl hover:-translate-y-0.5 flex items-center justify-center gap-2">
-                        <span>Pelajari Masalah</span>
-                        <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                <!-- Shortcut Buttons -->
+                <div class="pt-6 flex flex-wrap items-center justify-center gap-4">
+                    <a href="#masalah" class="px-6 py-3.5 rounded-xl bg-white text-brand-900 hover:bg-emerald-50 font-bold transition-all shadow-lg flex items-center gap-2 text-sm sm:text-base">
+                        <span>Lihat Masalah</span>
+                        <i data-lucide="arrow-down-circle" class="w-5 h-5"></i>
                     </a>
-                    <a href="#solusi" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-700/80 hover:bg-brand-700 border border-emerald-400/30 text-white font-bold transition-all shadow-lg hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                    <a href="#solusi" class="px-6 py-3.5 rounded-xl bg-brand-700/80 hover:bg-brand-700 border border-emerald-400/30 text-white font-bold transition-all shadow-lg flex items-center gap-2 text-sm sm:text-base">
                         <span>Lihat Solusi</span>
-                        <i data-lucide="sparkles" class="w-4 h-4"></i>
+                        <i data-lucide="sparkles" class="w-5 h-5"></i>
                     </a>
                 </div>
             </div>
 
-            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto text-center">
+            <!-- Keunggulan Ringkas -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-center">
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/10">
                     <div class="text-2xl sm:text-3xl font-extrabold text-amber-300">100%</div>
                     <div class="text-xs sm:text-sm text-emerald-100 mt-1">Biodegradable</div>
@@ -147,327 +144,308 @@
                 </div>
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/10">
                     <div class="text-2xl sm:text-3xl font-extrabold text-amber-300">Rp 2.500</div>
-                    <div class="text-xs sm:text-sm text-emerald-100 mt-1">Biaya / Unit</div>
+                    <div class="text-xs sm:text-sm text-emerald-100 mt-1">Estimasi Biaya / Unit</div>
                 </div>
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/10">
                     <div class="text-2xl sm:text-3xl font-extrabold text-amber-300">0%</div>
-                    <div class="text-xs sm:text-sm text-emerald-100 mt-1">Bebas Klorin & SAP</div>
+                    <div class="text-xs sm:text-sm text-emerald-100 mt-1">Bebas Klorin & SAP Sintetis</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION MASALAH -->
-    <section id="masalah" class="py-20 bg-slate-50 relative">
+    <!-- BAGIAN 1: MASALAH -->
+    <section id="masalah" class="py-20 bg-slate-50 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Latar Belakang & Urgensi</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Krisis Limbah Popok Sekali Pakai</h2>
-                <p class="text-slate-600 mt-4 text-lg">Popok konvensional menimbulkan ancaman ganda bagi lingkungan dan kesehatan kulit bayi.</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Permasalahan Limbah Popok</h2>
+                <p class="text-slate-600 mt-4 text-base sm:text-lg">Popok sekali pakai konvensional menimbulkan ancaman serius bagi lingkungan dan kesehatan kulit bayi.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/80 hover:shadow-md transition-shadow">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/80">
                     <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-6">
                         <i data-lucide="trash-2" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-3xl font-extrabold text-slate-900 mb-2">3.488 <span class="text-lg font-normal text-slate-500">ton/hari</span></h3>
-                    <p class="text-sm font-semibold text-red-600 mb-2">17,44 Juta Popok/Hari</p>
-                    <p class="text-slate-600 text-sm leading-relaxed">Volume fantastis sampah popok sekali pakai yang menumpuk di TPA dan lingkungan Indonesia setiap hari.</p>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-2">3.488 Ton</h3>
+                    <p class="text-sm font-semibold text-red-600 mb-2">Sampah Popok Per Hari</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Volume sampah popok sekali pakai di Indonesia terus menumpuk di TPA dan mencemari saluran air.</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/80 hover:shadow-md transition-shadow">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/80">
                     <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center mb-6">
                         <i data-lucide="clock" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-3xl font-extrabold text-slate-900 mb-2">400-500 <span class="text-lg font-normal text-slate-500">Tahun</span></h3>
-                    <p class="text-sm font-semibold text-amber-600 mb-2">Sulit Terurai</p>
-                    <p class="text-slate-600 text-sm leading-relaxed">Popok plastik konvensional membutuhkan waktu hingga setengah milenium untuk terdegradasi secara alami.</p>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-2">250-500 Thn</h3>
+                    <p class="text-sm font-semibold text-amber-600 mb-2">Waktu Terurai</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Popok berbahan plastik sintetis membutuhkan waktu hingga ratusan tahun untuk terdegradasi di tanah.</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/80 hover:shadow-md transition-shadow">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/80">
                     <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="biohazard" class="w-6 h-6"></i>
+                        <i data-lucide="shield-alert" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-3xl font-extrabold text-slate-900 mb-2">Dioksin <span class="text-lg font-normal text-slate-500">& Furan</span></h3>
-                    <p class="text-sm font-semibold text-purple-600 mb-2">Residu Pemutih Klorin</p>
-                    <p class="text-slate-600 text-sm leading-relaxed">Proses pemutihan klorin menghasilkan senyawa kimia beracun yang berisiko bagi lingkungan dan kesehatan.</p>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-2">Bahan Kimia</h3>
+                    <p class="text-sm font-semibold text-purple-600 mb-2">Pemutih Klorin & SAP Sintetis</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Proses bleaching berbahan klorin menghasilkan residu berisiko yang memicu iritasi dan bahaya lingkungan.</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/80 hover:shadow-md transition-shadow">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/80">
                     <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="alert-triangle" class="w-6 h-6"></i>
+                        <i data-lucide="activity" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-3xl font-extrabold text-slate-900 mb-2">Ruam & <span class="text-lg font-normal text-slate-500">Iritasi</span></h3>
-                    <p class="text-sm font-semibold text-rose-600 mb-2">SAP Sintetis & Ftalat</p>
-                    <p class="text-slate-600 text-sm leading-relaxed">Penggunaan bahan sintetis petrokimia memicu dermatitis parah pada bayi dan mencemari ekosistem laut.</p>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-2">Ruam Popok</h3>
+                    <p class="text-sm font-semibold text-rose-600 mb-2">Iritasi Kulit Bayi</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Kelembapan berlebih dan infeksi bakteri pada popok konvensional menjadi penyebab utama ruam sensitif pada kulit bayi.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION SOLUSI & INOVASI -->
-    <section id="solusi" class="py-20 bg-emerald-900 text-white relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- BAGIAN 2: SOLUSI -->
+    <section id="solusi" class="py-20 bg-emerald-900 text-white scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-emerald-400 font-bold uppercase tracking-wider text-sm">Terobosan Bahan Alam</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Konsep & Keunggulan Eco-Diaper</h2>
-                <p class="text-emerald-200 mt-4 text-lg">Mengkombinasikan serat limbah pertanian lokal dan kearifan ekstrak herbal antibakteri.</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Solusi Inovatif Eco-Diaper</h2>
+                <p class="text-emerald-200 mt-4 text-base sm:text-lg">Menggabungkan potensi limbah batang pisang lokal dan khasiat antibakteri alami daun sirih.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                 <div class="bg-emerald-800/60 border border-emerald-700/50 rounded-2xl p-8 backdrop-blur-md">
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-amber-500/20 text-amber-400 rounded-xl flex items-center justify-center font-bold text-xl">
+                        <div class="w-12 h-12 bg-amber-500/20 text-amber-400 rounded-xl flex items-center justify-center font-bold">
                             <i data-lucide="sprout" class="w-6 h-6"></i>
                         </div>
                         <div>
                             <h3 class="text-xl font-bold text-white">Serat Batang Pisang</h3>
-                            <span class="text-xs text-amber-300 font-medium">Kandungan Selulosa ~83%</span>
+                            <span class="text-xs text-amber-300 font-medium">Tinggi Selulosa Alami (~83%)</span>
                         </div>
                     </div>
                     <p class="text-emerald-100 text-sm leading-relaxed">
-                        Memanfaatkan limbah pertanian batang pisang lokal Kalimantan Barat yang kaya akan serat selulosa tinggi. Menghasilkan bahan penyerap alami dengan struktur daya kapilaritas unggul tanpa merusak lingkungan.
+                        Memanfaatkan limbah pertanian pelepah/batang pisang lokal Kalimantan Barat. Serat selulosa alami memiliki kapilaritas tinggi untuk menyerap cairan secara optimal dan ramah lingkungan.
                     </p>
                 </div>
 
                 <div class="bg-emerald-800/60 border border-emerald-700/50 rounded-2xl p-8 backdrop-blur-md">
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-xl flex items-center justify-center font-bold text-xl">
+                        <div class="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-xl flex items-center justify-center font-bold">
                             <i data-lucide="shield-check" class="w-6 h-6"></i>
                         </div>
                         <div>
                             <h3 class="text-xl font-bold text-white">Ekstrak Daun Sirih</h3>
-                            <span class="text-xs text-emerald-300 font-medium">Piper betle L. (Antimikroba)</span>
+                            <span class="text-xs text-emerald-300 font-medium">Kandungan Senyawa Antibakteri Alami</span>
                         </div>
                     </div>
                     <p class="text-emerald-100 text-sm leading-relaxed">
-                        Diintegrasikan ke dalam inti penyerap sebagai agen antibakteri aktif alami. Terbukti efektif mencegah pertumbuhan bakteri penyebab ruam popok dan bau tidak sedap secara aman.
+                        Diintegrasikan pada inti penyerap untuk menghambat pertumbuhan bakteri penyebab bau tak sedap dan mencegah terjadinya dermatitis/ruam pada kulit sensitive bayi.
                     </p>
                 </div>
             </div>
 
+            <!-- Keunggulan Produk -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white/5 border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition">
-                    <div class="w-10 h-10 bg-emerald-400/20 text-emerald-300 rounded-lg flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="recycle" class="w-5 h-5"></i>
-                    </div>
-                    <h4 class="font-bold text-white mb-2">100% Biodegradable</h4>
-                    <p class="text-xs text-emerald-200">Terurai 10% dalam 1,5 bulan dan hancur sempurna dalam hitungan bulan di tanah.</p>
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+                    <i data-lucide="recycle" class="w-8 h-8 text-emerald-400 mx-auto mb-3"></i>
+                    <h4 class="font-bold text-white mb-2">Mudah Terurai</h4>
+                    <p class="text-xs text-emerald-200">Terurai alami dalam waktu singkat di dalam tanah tanpa meninggalkan mikroplastik.</p>
                 </div>
 
-                <div class="bg-white/5 border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition">
-                    <div class="w-10 h-10 bg-emerald-400/20 text-emerald-300 rounded-lg flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="check-circle" class="w-5 h-5"></i>
-                    </div>
-                    <h4 class="font-bold text-white mb-2">Bebas Bahan Kimia</h4>
-                    <p class="text-xs text-emerald-200">Nol penggunaan klorin, ftalat, dan SAP sintetis petrokimia yang berbahaya.</p>
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+                    <i data-lucide="check-circle" class="w-8 h-8 text-emerald-400 mx-auto mb-3"></i>
+                    <h4 class="font-bold text-white mb-2">Nol Klorin & Bebas Kimia</h4>
+                    <p class="text-xs text-emerald-200">Proses manufaktur aman tanpa pemutihan klorin yang membahayakan kulit.</p>
                 </div>
 
-                <div class="bg-white/5 border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition">
-                    <div class="w-10 h-10 bg-emerald-400/20 text-emerald-300 rounded-lg flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="piggy-bank" class="w-5 h-5"></i>
-                    </div>
-                    <h4 class="font-bold text-white mb-2">Biaya Ekonomis</h4>
-                    <p class="text-xs text-emerald-200">Biaya produksi terjangkau hanya Rp 2.500 / unit, sangat kompetitif di pasaran.</p>
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+                    <i data-lucide="piggy-bank" class="w-8 h-8 text-emerald-400 mx-auto mb-3"></i>
+                    <h4 class="font-bold text-white mb-2">Harga Terjangkau</h4>
+                    <p class="text-xs text-emerald-200">Estimasi biaya produksi ekonomis (Rp 2.500/pcs) sehingga sangat kompetitif.</p>
                 </div>
 
-                <div class="bg-white/5 border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition">
-                    <div class="w-10 h-10 bg-emerald-400/20 text-emerald-300 rounded-lg flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="users" class="w-5 h-5"></i>
-                    </div>
-                    <h4 class="font-bold text-white mb-2">Pemberdayaan Lokal</h4>
-                    <p class="text-xs text-emerald-200">Meningkatkan nilai ekonomi limbah dan memberdayakan petani pisang di Kalbar.</p>
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+                    <i data-lucide="heart" class="w-8 h-8 text-emerald-400 mx-auto mb-3"></i>
+                    <h4 class="font-bold text-white mb-2">Aman & Nyaman</h4>
+                    <p class="text-xs text-emerald-200">Menjaga kelembapan ideal dan mencegah iritasi pada lipatan kulit bayi.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION SPESIFIKASI & HASIL UJI -->
-    <section id="spesifikasi" class="py-20 bg-white">
+    <!-- BAGIAN 3: PROSEDUR PEMBUATAN -->
+    <section id="prosedur" class="py-20 bg-white scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Metodologi Penelitian</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Prosedur Pembuatan Eco-Diaper</h2>
+                <p class="text-slate-600 mt-4 text-base sm:text-lg">Tahapan sistematis pengolahan bahan baku hingga perakitan produk popok.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="border border-slate-200 rounded-2xl p-6 relative bg-slate-50">
+                    <div class="w-10 h-10 bg-brand-600 text-white rounded-full flex items-center justify-center font-extrabold mb-4">1</div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Ekstraksi Serat</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">Batang pisang dibersihkan, dicacah, lalu diekstraksi dan dikeringkan untuk mengambil serat selulosa bersih.</p>
+                </div>
+
+                <div class="border border-slate-200 rounded-2xl p-6 relative bg-slate-50">
+                    <div class="w-10 h-10 bg-brand-600 text-white rounded-full flex items-center justify-center font-extrabold mb-4">2</div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Ekstraksi Daun Sirih</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">Daun sirih diekstraksi dengan pelarut sesuai standar laboratorium untuk mengambil kandungan fitokimia antibakterinya.</p>
+                </div>
+
+                <div class="border border-slate-200 rounded-2xl p-6 relative bg-slate-50">
+                    <div class="w-10 h-10 bg-brand-600 text-white rounded-full flex items-center justify-center font-extrabold mb-4">3</div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Formulasi Core</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">Pencampuran serat selulosa batang pisang dengan formulasi ekstrak daun sirih dan bio-absorbent alami.</p>
+                </div>
+
+                <div class="border border-slate-200 rounded-2xl p-6 relative bg-slate-50">
+                    <div class="w-10 h-10 bg-brand-600 text-white rounded-full flex items-center justify-center font-extrabold mb-4">4</div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Perakitan Layer</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">Penggabungan topsheet non-woven, inti penyerap (core), dan backsheet teruraikan menjadi satu unit popok utuh.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BAGIAN 4: HASIL UJI SNI -->
+    <section id="hasil-uji" class="py-20 bg-slate-50 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Validasi Laboratorium</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Hasil Pengujian SNI 8802:2019</h2>
-                <p class="text-slate-600 mt-4 text-lg">Teruji secara ilmiah memenuhi dan melampaui Standar Nasional Indonesia untuk kenyamanan & keamanan bayi.</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Hasil Pengujian (SNI 8802:2019)</h2>
+                <p class="text-slate-600 mt-4 text-base sm:text-lg">Pengujian parameter kualitas popok terbukti memenuhi standar kelayakan SNI.</p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-                <div class="border border-slate-200 rounded-2xl p-6 hover:border-brand-500 transition shadow-sm hover:shadow">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
                     <div class="flex items-center justify-between mb-4">
-                        <span class="text-xs font-bold px-2.5 py-1 bg-emerald-100 text-brand-800 rounded-full">Sangat Unggul</span>
+                        <span class="text-xs font-bold px-3 py-1 bg-emerald-100 text-brand-800 rounded-full">Sangat Memenuhi</span>
                         <i data-lucide="droplet" class="w-6 h-6 text-brand-600"></i>
                     </div>
                     <h3 class="text-lg font-bold text-slate-900 mb-1">Daya Serap Alami</h3>
                     <div class="text-3xl font-extrabold text-brand-600 mb-2">14x <span class="text-sm font-normal text-slate-500">berat awal</span></div>
-                    <p class="text-xs text-slate-500 mb-4">Standar SNI: Minimal 3x berat awal</p>
-                    <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                        <div class="bg-brand-500 h-full w-[100%]"></div>
-                    </div>
+                    <p class="text-xs text-slate-500">Standard SNI: Minimal 3x berat awal popok.</p>
                 </div>
 
-                <div class="border border-slate-200 rounded-2xl p-6 hover:border-brand-500 transition shadow-sm hover:shadow">
+                <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
                     <div class="flex items-center justify-between mb-4">
-                        <span class="text-xs font-bold px-2.5 py-1 bg-emerald-100 text-brand-800 rounded-full">Sesuai Kulit Bayi</span>
+                        <span class="text-xs font-bold px-3 py-1 bg-emerald-100 text-brand-800 rounded-full">Aman Kulit Bayi</span>
                         <i data-lucide="heart-pulse" class="w-6 h-6 text-brand-600"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-1">Uji Derajat Keasaman (pH)</h3>
-                    <div class="text-3xl font-extrabold text-brand-600 mb-2">pH 5,0 <span class="text-sm font-normal text-slate-500">(Netral Aman)</span></div>
-                    <p class="text-xs text-slate-500 mb-4">Standar SNI: Rentang 4,0 - 8,7</p>
-                    <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                        <div class="bg-brand-500 h-full w-[85%]"></div>
-                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-1">Derajat Keasaman (pH)</h3>
+                    <div class="text-3xl font-extrabold text-brand-600 mb-2">pH 5,0 <span class="text-sm font-normal text-slate-500">(Aman)</span></div>
+                    <p class="text-xs text-slate-500">Standard SNI: Rentang aman pH 4,0 - 8,7.</p>
                 </div>
 
-                <div class="border border-slate-200 rounded-2xl p-6 hover:border-brand-500 transition shadow-sm hover:shadow">
+                <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
                     <div class="flex items-center justify-between mb-4">
-                        <span class="text-xs font-bold px-2.5 py-1 bg-emerald-100 text-brand-800 rounded-full">Presisi Tinggi</span>
+                        <span class="text-xs font-bold px-3 py-1 bg-emerald-100 text-brand-800 rounded-full">Minimalis Leakage</span>
                         <i data-lucide="shield" class="w-6 h-6 text-brand-600"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-1">Uji Kebocoran Samping</h3>
+                    <h3 class="text-lg font-bold text-slate-900 mb-1">Kebocoran Samping</h3>
                     <div class="text-3xl font-extrabold text-brand-600 mb-2">0,047 gram</div>
-                    <p class="text-xs text-slate-500 mb-4">Standar SNI: Maksimal 2,0 gram</p>
-                    <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                        <div class="bg-brand-500 h-full w-[95%]"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="max-w-4xl mx-auto">
-                <h3 class="text-2xl font-bold text-slate-900 text-center mb-8">Struktur & Anatomi Layer Eco-Diaper</h3>
-                
-                <div class="space-y-4">
-                    <div class="layer-box bg-slate-50 border-l-4 border-emerald-500 p-5 rounded-r-xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
-                        <div>
-                            <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Layer 1 - Topsheet</span>
-                            <h4 class="font-bold text-slate-900 text-lg">Lapisan Non-Woven Alami</h4>
-                            <p class="text-slate-600 text-sm">Lembut bersentuhan dengan kulit bayi, cepat meneruskan cairan ke dalam tanpa kelembapan balik.</p>
-                        </div>
-                        <span class="px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-semibold rounded-full w-fit">Hypoallergenic</span>
-                    </div>
-
-                    <div class="layer-box bg-slate-50 border-l-4 border-amber-500 p-5 rounded-r-xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
-                        <div>
-                            <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Layer 2 - Absorbent Core</span>
-                            <h4 class="font-bold text-slate-900 text-lg">Serat Batang Pisang + Ekstrak Daun Sirih</h4>
-                            <p class="text-slate-600 text-sm">Penyerap utama berkadar selulosa ~83% dipadu bio-antimikroba alami pembasmi bakteri.</p>
-                        </div>
-                        <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-semibold rounded-full w-fit">Antibakteri Active</span>
-                    </div>
-
-                    <div class="layer-box bg-slate-50 border-l-4 border-teal-500 p-5 rounded-r-xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
-                        <div>
-                            <span class="text-xs font-bold text-teal-600 uppercase tracking-wider">Layer 3 - Bio SAP</span>
-                            <h4 class="font-bold text-slate-900 text-lg">Superabsorbent Polymer Nabati (Pati Singkong)</h4>
-                            <p class="text-slate-600 text-sm">Mengunci cairan secara maksimal secara terdegradasi alami, pengganti SAP sintesis petrokimia.</p>
-                        </div>
-                        <span class="px-3 py-1 bg-teal-100 text-teal-800 text-xs font-semibold rounded-full w-fit">Bio-Polymer</span>
-                    </div>
-
-                    <div class="layer-box bg-slate-50 border-l-4 border-blue-500 p-5 rounded-r-xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
-                        <div>
-                            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Layer 4 - Backsheet</span>
-                            <h4 class="font-bold text-slate-900 text-lg">Biodegradable Breathable Film</h4>
-                            <p class="text-slate-600 text-sm">Menahan kebocoran luar namun tetap memberikan sirkulasi udara optimal untuk cegah lembap.</p>
-                        </div>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full w-fit">Waterproof & Breathable</span>
-                    </div>
+                    <p class="text-xs text-slate-500">Standard SNI: Maksimal toleransi 2,0 gram.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION DAMPAK & SDGS -->
-    <section id="dampak" class="py-20 bg-slate-50">
+    <!-- BAGIAN 5: DAMPAK SDGS -->
+    <section id="sdgs" class="py-20 bg-white scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Kontribusi Berkelanjutan</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Dampak & Dukungan SDGs</h2>
-                <p class="text-slate-600 mt-4 text-lg">Mendukung pencapaian Sustainable Development Goals untuk bumi yang lebih hijau.</p>
+                <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Keberlanjutan Lingkungan</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Dukungan Terhadap SDGs</h2>
+                <p class="text-slate-600 mt-4 text-base sm:text-lg">Eco-Diaper berkontribusi aktif dalam mendukung pencapaian Sustainable Development Goals.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-                <div class="bg-white p-6 rounded-2xl border-t-4 border-sky-500 shadow-sm">
-                    <div class="flex items-center gap-3 mb-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-50 p-6 rounded-2xl border-t-4 border-sky-500">
+                    <div class="flex items-center gap-3 mb-3">
                         <div class="w-10 h-10 bg-sky-500 text-white font-black rounded-lg flex items-center justify-center text-lg">6</div>
-                        <h3 class="font-bold text-slate-900 text-sm">Air Bersih & Sanitasi Layak</h3>
+                        <h3 class="font-bold text-slate-900 text-sm">Air Bersih & Sanitasi</h3>
                     </div>
-                    <p class="text-slate-600 text-xs leading-relaxed">Mengurangi pencemaran mikroplastik dan senyawa berbahaya klorin di ekosistem perairan dan sumber air.</p>
+                    <p class="text-slate-600 text-xs leading-relaxed">Mengurangi pencemaran air dan tanah akibat limbah plastik dan pemutih klorin.</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-2xl border-t-4 border-emerald-600 shadow-sm">
-                    <div class="flex items-center gap-3 mb-4">
+                <div class="bg-slate-50 p-6 rounded-2xl border-t-4 border-emerald-600">
+                    <div class="flex items-center gap-3 mb-3">
                         <div class="w-10 h-10 bg-emerald-600 text-white font-black rounded-lg flex items-center justify-center text-lg">13</div>
                         <h3 class="font-bold text-slate-900 text-sm">Penanganan Perubahan Iklim</h3>
                     </div>
-                    <p class="text-slate-600 text-xs leading-relaxed">Menekan emisi gas rumah kaca dari pembakaran sampah plastik popok konvensional di TPA.</p>
+                    <p class="text-slate-600 text-xs leading-relaxed">Menekan emisi gas rumah kaca hasil pembakaran limbah popok sekali pakai.</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-2xl border-t-4 border-blue-600 shadow-sm">
-                    <div class="flex items-center gap-3 mb-4">
+                <div class="bg-slate-50 p-6 rounded-2xl border-t-4 border-blue-600">
+                    <div class="flex items-center gap-3 mb-3">
                         <div class="w-10 h-10 bg-blue-600 text-white font-black rounded-lg flex items-center justify-center text-lg">14</div>
                         <h3 class="font-bold text-slate-900 text-sm">Ekosistem Lautan</h3>
                     </div>
-                    <p class="text-slate-600 text-xs leading-relaxed">Mencegah masuknya sampah popok plastik yang menjadi penyumbang terbesar kedua sampah di lautan.</p>
+                    <p class="text-slate-600 text-xs leading-relaxed">Mencegah akumulasi limbah plastik mikro yang mencemari biota dan ekosistem lautan.</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-2xl border-t-4 border-lime-600 shadow-sm">
-                    <div class="flex items-center gap-3 mb-4">
+                <div class="bg-slate-50 p-6 rounded-2xl border-t-4 border-lime-600">
+                    <div class="flex items-center gap-3 mb-3">
                         <div class="w-10 h-10 bg-lime-600 text-white font-black rounded-lg flex items-center justify-center text-lg">15</div>
                         <h3 class="font-bold text-slate-900 text-sm">Ekosistem Daratan</h3>
                     </div>
-                    <p class="text-slate-600 text-xs leading-relaxed">Mengembalikan nutrisi organik ke tanah melalui bahan terurai tanpa meninggalkan racun kimia.</p>
+                    <p class="text-slate-600 text-xs leading-relaxed">Menggunakan bahan organik teruraikan yang menjaga kesuburan struktur tanah.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION TIM KAMI -->
-    <section id="tim" class="py-20 bg-white">
+    <!-- BAGIAN 6: TIM KERJA -->
+    <section id="tim" class="py-20 bg-slate-50 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Inovator Muda</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Tim Peneliti Eco-Diaper</h2>
-                <p class="text-slate-600 mt-4 text-lg">SMK SMTI Pontianak - Peserta AHM Best Student 2026</p>
+                <p class="text-slate-600 mt-4 text-base sm:text-lg">SMK SMTI Pontianak</p>
             </div>
 
-            <div class="max-w-xl mx-auto mb-12 bg-emerald-50 border border-emerald-200 rounded-2xl p-6 flex items-center gap-4">
+            <!-- Pembimbing -->
+            <div class="max-w-xl mx-auto mb-12 bg-white border border-emerald-200 rounded-2xl p-6 flex items-center gap-4 shadow-sm">
                 <div class="w-14 h-14 bg-brand-600 text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">
                     <i data-lucide="user-check" class="w-7 h-7"></i>
                 </div>
                 <div>
                     <span class="text-xs font-bold text-brand-700 uppercase tracking-wider">Guru Pembimbing</span>
                     <h3 class="text-xl font-bold text-slate-900">Cyntia Sari Dewi, S.Si</h3>
-                    <p class="text-xs text-slate-600 mt-1">Pembimbing Karya Tulis & Penelitian Laboratorium SMK SMTI Pontianak</p>
+                    <p class="text-xs text-slate-600 mt-0.5">Pembimbing Penelitian & Pengujian Laboratorium</p>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 text-center hover:shadow-lg transition">
-                    <div class="w-20 h-20 bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-md">
+            <!-- Anggota Tim -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 text-center shadow-sm hover:shadow-md transition">
+                    <div class="w-20 h-20 bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                         DZ
                     </div>
                     <h3 class="font-bold text-slate-900 text-xl">Dayangku Nur Zahira</h3>
-                    <p class="text-xs font-semibold text-brand-600 mb-3">Koordinator Umum & Perancangan Produk</p>
-                    <p class="text-slate-600 text-xs leading-relaxed mb-4">Bertanggung jawab atas manajemen tim, konsep inovasi, dan desain bentuk ergomints popok.</p>
+                    <p class="text-xs font-semibold text-brand-600 mt-1">Anggota Tim Peneliti</p>
+                    <p class="text-slate-600 text-xs mt-3">Siswa Analisis Pengujian Laboratorium - SMK SMTI Pontianak</p>
                 </div>
 
-                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 text-center hover:shadow-lg transition">
-                    <div class="w-20 h-20 bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-md">
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 text-center shadow-sm hover:shadow-md transition">
+                    <div class="w-20 h-20 bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                         NZ
                     </div>
                     <h3 class="font-bold text-slate-900 text-xl">Naura Alfiya Zahra</h3>
-                    <p class="text-xs font-semibold text-brand-600 mb-3">Pengolahan Bahan & Uji Kualitas</p>
-                    <p class="text-slate-600 text-xs leading-relaxed mb-4">Memimpin proses teknis isolasi serat batang pisang, ekstraksi daun sirih, dan pengujian SNI.</p>
+                    <p class="text-xs font-semibold text-brand-600 mt-1">Anggota Tim Peneliti</p>
+                    <p class="text-slate-600 text-xs mt-3">Siswa Analisis Pengujian Laboratorium - SMK SMTI Pontianak</p>
                 </div>
 
-                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 text-center hover:shadow-lg transition">
-                    <div class="w-20 h-20 bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-md">
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 text-center shadow-sm hover:shadow-md transition">
+                    <div class="w-20 h-20 bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                         OP
                     </div>
                     <h3 class="font-bold text-slate-900 text-xl">Oktaviani Rizqi Pamungkas</h3>
-                    <p class="text-xs font-semibold text-brand-600 mb-3">Analisis Data & Dokumentasi</p>
-                    <p class="text-slate-600 text-xs leading-relaxed mb-4">Mengelola analisis data statistik pengujian, penyusunan laporan ilmiah, dan dokumentasi riset.</p>
+                    <p class="text-xs font-semibold text-brand-600 mt-1">Anggota Tim Peneliti</p>
+                    <p class="text-slate-600 text-xs mt-3">Siswa Analisis Pengujian Laboratorium - SMK SMTI Pontianak</p>
                 </div>
             </div>
         </div>
@@ -480,11 +458,12 @@
                 <i data-lucide="leaf" class="w-5 h-5 text-brand-500"></i>
                 <span>Eco-Diaper Project</span>
             </div>
-            <p class="text-xs text-slate-500">SMK SMTI Pontianak | AHM Best Student 2026</p>
-            <p class="text-xs text-slate-600 pt-4">Hak Cipta &copy; 2026 Eco-Diaper Team. Seluruh Hak Dilindungi Undang-Undang.</p>
+            <p class="text-xs text-slate-500">SMK SMTI Pontianak</p>
+            <p class="text-xs text-slate-600 pt-2">&copy; Eco-Diaper Team. Hak Cipta Dilindungi Undang-Undang.</p>
         </div>
     </footer>
 
+    <!-- Script Lucide Icons & Mobile Menu -->
     <script>
         lucide.createIcons();
 
@@ -500,15 +479,6 @@
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
-        });
-
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                navbar.classList.add('shadow-md');
-            } else {
-                navbar.classList.remove('shadow-md');
-            }
         });
     </script>
 </body>
